@@ -92,7 +92,7 @@ namespace FP.Radius
 
 				do
 				{
-					await udpClient.SendAsync(packet.RawData, packet.RawData.Length);
+					await udpClient.SendAsync(packet.RawData, packet.RawData.Length).ConfigureAwait(false);
 
 					try
 					{
